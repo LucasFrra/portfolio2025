@@ -1,10 +1,10 @@
 <template>
-  <section ref="hero" class="flex flex-col items-center px-4 overflow-hidden"  
+  <section ref="hero" class="flex flex-col items-center overflow-hidden h-screen justify-center"
     style="perspective:900px; transform-style:preserve-3d;">
     <div class="title-container relative inline-block">
       <h1 ref="titleEl" class="title relative text-center leading-none font-extrabold"
-        style="transform-style:preserve-3d; font-size:18vmin; letter-spacing:-0.07em;">
-        <div class="words flex flex-col items-center leading-none px-12 py-8">
+        style="transform-style:preserve-3d; font-size:24vmin; letter-spacing:-0.07em;">
+        <div class="words flex flex-col items-center leading-none">
           <div class="text-3dLayer web">
             <span class="layer back">WEB</span>
             <span class="layer mid">WEB</span>
@@ -125,7 +125,7 @@ onMounted(() => {
 }
 
 .text-3dLayer {
-  font-size: clamp(6rem, 24vmin, 18rem);
+  font-size: clamp(6rem, 28vmin, 18rem);
   white-space: nowrap;
   overflow: visible;
   text-align: center;
