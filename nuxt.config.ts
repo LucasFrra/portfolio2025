@@ -4,5 +4,16 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
   ],
-  devtools: { enabled: true }
+  css: [
+    '@/assets/css/main.css',
+  ],
+  devtools: { enabled: true },
+  app: {
+    head: {
+      link:[
+        { rel:'preconnect', href:'https://fonts.gstatic.com', crossorigin:'' },
+        { rel:'stylesheet', href:'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' }
+      ]
+    }
+  },
 })

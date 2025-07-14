@@ -1,2 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  html{ @apply font-bebas; }
+}
+
 .page-enter-active,.page-leave-active{transition:.4s;opacity:1}
 .page-enter-from,.page-leave-to{opacity:0}
