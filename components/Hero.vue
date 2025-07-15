@@ -1,19 +1,23 @@
 <template>
-  <section ref="hero" class="flex flex-col items-center overflow-hidden h-screen justify-center"
+  <section ref="hero" class="h-screen flex flex-col items-center justify-center px-4 overflow-hidden"
     style="perspective:900px; transform-style:preserve-3d;">
-    <div class="title-container relative inline-block">
-      <h1 ref="titleEl" class="title relative text-center leading-none font-extrabold"
+    <div class="relative inline-block font-anton">
+      <h1 ref="titleEl" class="relative text-center leading-none font-extrabold"
         style="transform-style:preserve-3d; font-size:24vmin; letter-spacing:-0.07em;">
-        <div class="words flex flex-col items-center leading-none">
-          <div class="text-3dLayer web">
-            <span class="layer back">WEB</span>
-            <span class="layer mid">WEB</span>
-            <span class="layer front">WEB</span>
+        <div class="relative flex flex-col items-center overflow-hidden">
+          <div
+            class="relative grid [grid-template:'layer'] scale-y-[1.1] scale-x-[0.9] font-normal tracking-[-0.04em] whitespace-nowrap">
+            <span class="layer [grid-area:layer] translate-x-[6px] translate-y-[6px] text-primary-back">WEB</span>
+            <span class="layer [grid-area:layer] translate-x-[3px] translate-y-[3px] text-primary-mid">WEB</span>
+            <span class="layer [grid-area:layer] text-white z-[4] text-stroke text-stroke-primary">WEB</span>
           </div>
-          <div class="text-3dLayer web">
-            <span class="layer back">DEVELOPER</span>
-            <span class="layer mid">DEVELOPER</span>
-            <span class="layer front">DEVELOPER</span>
+          <div
+            class="relative grid [grid-template:'layer'] scale-y-[1.1] scale-x-[0.9] font-normal tracking-[-0.04em] whitespace-nowrap mt-2">
+            <span
+              class="layer [grid-area:layer] translate-x-[6px] translate-y-[6px] text-green-500/50 z-[2]">DEVELOPER</span>
+            <span
+              class="layer [grid-area:layer] translate-x-[3px] translate-y-[3px] text-green-500/75 z-[3]">DEVELOPER</span>
+            <span class="layer [grid-area:layer] text-white z-[4] text-stroke text-stroke-primary">DEVELOPER</span>
           </div>
         </div>
       </h1>
@@ -31,7 +35,6 @@ const titleEl = ref<HTMLElement>()
 onMounted(() => {
   const title = titleEl.value!
 
-  const sprites = hero.value!.querySelectorAll<HTMLElement>('.sprite')
   const layers = title.querySelectorAll<HTMLElement>('.layer')
   const tiltRange = 4
   const spriteShift = 15
@@ -50,15 +53,6 @@ onMounted(() => {
         duration: .4,
         ease: 'power2.out'
       })
-      sprites.forEach((el, i) =>
-        gsap.to(el, {
-          x: -pctX * spriteShift * (0.4 + i * .1),
-          y: -pctY * spriteShift * (0.4 + i * .1),
-          rotate: -pctX * tiltRange * (0.3 + i * .1),
-          duration: .6,
-          ease: 'power2.out'
-        })
-      )
       layers.forEach((el, i) =>
         gsap.to(el, {
           x: -pctX * layerShift * layerDepth[i % 3],
@@ -73,25 +67,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.sprite {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  pointer-events: none;
-}
-
-.title-container {
-  font-family: 'Anton', sans-serif;
-}
-
-.words {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-}
-
 .words::after {
   content: '';
   position: absolute;
@@ -103,57 +78,5 @@ onMounted(() => {
   z-index: 0;
   filter: blur(60px);
   pointer-events: none;
-}
-
-.text-bg {
-  position: absolute;
-  top: calc(50% - .5em);
-  left: 0;
-  width: 100%;
-  height: 1em;
-  background: radial-gradient(circle at center, rgba(124, 58, 237, 0.15), transparent 70%);
-  filter: blur(30px);
-  z-index: 0;
-  pointer-events: none;
-}
-
-.web {
-  display: inline-grid;
-  grid-template: 'layer';
-}
-
-.text-3dLayer {
-  font-size: clamp(6rem, 28vmin, 18rem);
-  white-space: nowrap;
-  overflow: visible;
-  text-align: center;
-  display: grid;
-  grid-template: 'layer';
-  transform: scaleY(1.1) scaleX(0.9);
-  font-weight: 400;
-  letter-spacing: -0.04em;
-}
-
-.layer {
-  grid-area: layer;
-}
-
-.back {
-  transform: translate(6px, 6px);
-  color: rgba(34, 197, 94, 0.5);
-  z-index: 2;
-}
-
-.mid {
-  transform: translate(3px, 3px);
-  color: rgba(34, 197, 94, 0.75);
-  z-index: 3;
-}
-
-.front {
-  transform: translate(0, 0);
-  color: #fff;
-  -webkit-text-stroke: 1px #22c55e;
-  z-index: 4;
 }
 </style>
