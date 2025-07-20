@@ -8,11 +8,6 @@
                 LUCAS&nbsp;FERREIRA
             </h2>
 
-            <p class="font-black uppercase tracking-tight leading-none lg:text-right"
-                style="font-size:clamp(1.5rem,2.4vw,2rem);">
-                Disponible <span class="text-[#22c55e]">Septembre 2025</span>
-            </p>
-
         </div>
 
         <div class="col-span-12 lg:col-span-6 space-y-10">
@@ -33,7 +28,7 @@
         </div>
 
         <div class="col-span-12 lg:col-span-6 lg:flex lg:flex-col
-                lg:items-end space-y-10">
+                lg:items-end space-y-10 text-right">
             <div class="space-y-4">
                 <h3 class="font-black uppercase text-2xl">Un projet en tête ?</h3>
                 <a href="mailto:contact@lucasferreira.fr" class="inline-flex items-center gap-2 text-lg underline
