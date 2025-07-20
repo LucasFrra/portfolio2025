@@ -11,6 +11,7 @@ export default {
         primary: '#22c55e',
         'primary-mid': 'rgba(34, 197, 94, 0.75)',
         'primary-back': 'rgba(34, 197, 94, 0.5)',
+        'bg-primary': 'rgba(34, 197, 94, 0.1)',
       },
     },
   },

@@ -1,5 +1,5 @@
 <template>
-  <section ref="hero" class="h-screen flex flex-col items-center justify-center px-4 overflow-hidden"
+  <section ref="hero" class="flex flex-col items-center py-12 overflow-hidden"
     style="perspective:900px; transform-style:preserve-3d;">
     <div class="relative inline-block font-anton">
       <h1 ref="titleEl" class="relative text-center leading-none font-extrabold"
