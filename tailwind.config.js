@@ -13,6 +13,9 @@ export default {
         'primary-back': 'rgba(34, 197, 94, 0.5)',
         'bg-primary': 'rgba(34, 197, 94, 0.1)',
       },
+      scale: {
+            '-100': '-1',
+        },
     },
   },
   plugins: [

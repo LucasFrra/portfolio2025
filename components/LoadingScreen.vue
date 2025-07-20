@@ -14,7 +14,7 @@ const visible = ref(true)
 onMounted(() => {
   setTimeout(() => {
     visible.value = false
-  }, 1500) // durée de ton splash (1.5s ici)
+  }, 1500)
 })
 </script>
 

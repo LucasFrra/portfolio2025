@@ -1,4 +1,5 @@
 <template>
+
   <NuxtLink
     :to="link"
     class="deck-card group absolute inset-0 m-auto w-[90vmin] h-[55vmin] rounded-3xl overflow-hidden bg-slate-900 shadow-xl transition-transform duration-300 hover:scale-[1.03]"
@@ -25,6 +26,23 @@
 </template>
 
 <script setup lang="ts">
+const { $confetti } = useNuxtApp()
+
+const explode = (direction: 'left' | 'right') => {
+  $confetti({
+    particleCount: 100,
+    angle: direction === 'right' ? 45 : 135,
+    spread: 90,
+    origin: { x: direction === 'right' ? 0.8 : 0.2, y: 0.6 },
+    shapes: ['circle', 'heart'],
+    colors: direction === 'right'
+      ? ['#ff69b4', '#ff4d94', '#ff0055']
+      : ['#aaa', '#999', '#666']
+  })
+}
+
+defineExpose({ explode })
+
 defineProps<{
   img: string
   title: string
