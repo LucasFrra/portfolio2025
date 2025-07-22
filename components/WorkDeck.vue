@@ -1,12 +1,15 @@
 <template>
-  <section ref="deck" class="h-screen relative">
+  <section ref="deck" class="relative min-h-[65vh] md:min-h-[100vh]">
     <!-- Titre desktop -->
-    <h2 class="hidden md:block absolute top-6 left-1/2 -translate-x-1/2 text-primary text-6xl font-extrabold z-30 curved-title">
+    <h2 class="hidden md:block absolute top-6 left-1/2  text-primary text-6xl font-extrabold z-30 animate-title-curve">
       Mes projets
+    </h2>
+    <h2 class="md:hidden block absolute top-6 left-1/2  text-primary text-3xl font-extrabold z-30 animate-title-curve">
+      Swipe et découvre !
     </h2>
 
     <!-- Indications mobile -->
-    <div class="md:hidden absolute top-1/2 left-0 right-0 z-30 flex justify-between items-center px-4 pointer-events-none">
+    <div class="md:hidden absolute top-1/3 left-0 right-0 z-30 flex justify-between items-center px-4 pointer-events-none">
   <!-- gauche -->
   <div class="flex flex-col items-center animate-swipe-float-left text-xs text-[#ffde34] opacity-80">
     <svg class="transform -scale-x-100" fill="#ffde34" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70px" height="70px" viewBox="0 0 400.943 400.943" xml:space="preserve" stroke="#22c55e" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.801886"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M398.961,174.729c0.612-3.06,0.612-6.12-0.612-9.792c-7.956-23.868-34.884-41.616-53.855-56.304 c-18.973-14.688-47.124-42.229-72.216-45.9c-0.612-1.224-1.225-3.06-2.448-3.672c-1.836-1.836-5.508-2.448-7.956-1.224 c-6.732,4.284-5.508,15.912-6.732,22.644c-1.224,8.568-2.448,17.748-3.06,26.928c-52.021,4.284-102.204,8.568-149.328,33.048 c-46.512,24.48-80.784,67.933-102.204,115.057c-1.836,4.284,1.224,7.956,4.896,7.956c1.224,1.836,3.06,2.448,4.896,1.224 c2.448-1.224,4.284-2.448,6.732-4.284c12.24,6.732,26.316,13.464,39.168,16.524h0.612c0,3.06,3.672,6.732,6.732,4.284 c43.452-29.988,106.488-26.929,155.448-17.748c0.611,0,1.224,0,1.836,0c3.06,25.704,7.956,50.796,15.912,75.275 c1.836,4.896,7.344,6.732,11.628,3.061c31.212-26.928,68.544-46.512,100.367-73.44c28.152-23.868,39.78-55.08,50.797-89.352 C402.021,178.4,400.797,175.953,398.961,174.729z M16.461,252.453c24.48-40.392,52.02-74.664,93.636-98.532 c27.54-15.912,56.916-22.644,87.516-25.704c18.972-1.836,39.168-1.224,57.528-6.732c3.061,1.836,6.732,0.612,8.568-3.06h0.612 c3.672-1.836,3.06-6.732,0.611-9.18c1.225-8.568,3.061-17.748,4.284-26.316c0-1.224,0.612-3.06,1.224-4.896 c36.108,29.376,85.068,47.124,111.385,88.128c14.688,22.644-83.845,87.517-110.16,108.937c0-3.672-1.225-7.956-1.225-11.628 c-1.224-12.853-3.672-26.316-7.955-38.557c0,0,0,0,0-0.611c3.672-3.061,3.06-10.404-2.448-11.628 C182.925,193.701,83.169,204.717,16.461,252.453z M320.013,277.545c-23.256,17.136-48.348,31.823-70.992,50.184 c-6.731-22.644-11.628-46.512-19.584-69.156c0-0.611-0.611-1.224-1.224-1.224c-0.612-1.836-1.836-3.061-4.284-3.672 c-47.124-11.017-117.504-14.076-158.508,17.748c0-1.836-1.224-3.061-3.06-3.672c-10.404-4.284-22.032-8.568-33.048-11.628 c33.66-18.36,69.768-28.152,108.936-32.437s76.5,1.836,115.668,3.061l0,0c1.836,12.239,1.836,24.479,2.448,37.332 c0,6.731-0.612,18.359,4.896,23.867c1.836,1.836,5.508,2.448,7.344,0.612c1.836,1.224,4.896,1.836,7.345-0.612 c25.704-23.256,55.691-41.004,82.008-63.036c4.284-3.672,11.628-9.18,18.972-15.911 C364.077,235.317,347.553,256.737,320.013,277.545z"></path> </g> </g></svg>
@@ -141,6 +144,7 @@ onMounted(() => {
     })
 
   })
+  
 })
 
 
@@ -169,5 +173,27 @@ onMounted(() => {
 .animate-swipe-float-right {
   animation: float-right 2.2s ease-in-out infinite;
 }
+
+@keyframes curveBounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-6px) rotate(-1deg) scale(1.02);
+  }
+  50% {
+    transform: translateX(-50%) translateY(4px) rotate(1deg) scale(0.98);
+  }
+  75% {
+    transform: translateX(-50%) translateY(-2px) rotate(-0.5deg) scale(1.01);
+  }
+}
+
+
+.animate-title-curve {
+  animation: curveBounce 3.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
 
 </style>
