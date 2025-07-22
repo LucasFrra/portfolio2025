@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur">
+  <header class="sticky top-0 z-50">
     <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3 font-semibold">
       <NuxtLink to="/"><img src="/logo-placeholder.svg" class="h-12" /></NuxtLink>
 

@@ -1,7 +1,7 @@
 <template>
   <section ref="deck" class="h-screen relative">
     <!-- Titre desktop -->
-    <h2 class="hidden md:block absolute top-6 left-1/2 -translate-x-1/2 text-primary text-3xl font-extrabold z-30">
+    <h2 class="hidden md:block absolute top-6 left-1/2 -translate-x-1/2 text-primary text-6xl font-extrabold z-30 curved-title">
       Mes projets
     </h2>
 
