@@ -1,24 +1,24 @@
 <template>
   <header class="sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3 font-semibold">
-      <NuxtLink to="/"><img src="/logo-placeholder.svg" class="h-12" /></NuxtLink>
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-10 py-3 font-semibold gap-10">
+  <div class="flex items-center gap-6">
+    <NuxtLink to="/">
+      <img src="/logo-placeholder.svg" class="h-14" />
+    </NuxtLink>
 
-      <ul class="hidden md:flex gap-10 uppercase text-sm">
-        <li v-for="l in links" :key="l.to">
-          <NuxtLink :to="l.to" class="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full
-                   after:bg-primary after:scale-x-0 after:origin-left after:transition-transform
-                   hover:after:scale-x-100 [&.router-link-active]:after:scale-x-100">
-            {{ l.label }}
-          </NuxtLink>
-        </li>
-      </ul>
+    <div class="hidden md:flex items-center gap-2 text-2xl text-primary transition hover:underline hover:opacity-90">
+      <a href="mailto:contact@lucasferreira.fr">contact@lucasferreira.fr</a>
+    </div>
+  </div>
 
-      <button v-show="!open" class="md:hidden flex flex-col gap-[6px] transition-all relative" @click="toggle">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-    </nav>
+  <ul class="hidden md:flex items-center gap-8 text-2xl uppercase text-primary tracking-wide">
+    <li v-for="l in links" :key="l.to">
+      <NuxtLink :to="l.to" class="transition hover:underline hover:opacity-80">
+        {{ l.label }}
+      </NuxtLink>
+    </li>
+  </ul>
+</nav>
   </header>
 
   <Teleport to="body">
