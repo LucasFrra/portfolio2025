@@ -1,7 +1,7 @@
 <template>
 <Hero />
 <WorkDeck />
-<Form />
+<ContactForm />
 </template>
 
 <script lang="ts" setup>

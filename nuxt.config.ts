@@ -11,4 +11,9 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+  vite: {
+    server: {
+      allowedHosts: ['bf7227032fc7.ngrok-free.app'],
+    },
+  },
 })
