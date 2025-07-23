@@ -6,7 +6,7 @@
         style="transform-style:preserve-3d; font-size:24vmin; letter-spacing:-0.07em;">
         <div class="relative flex flex-col items-center overflow-hidden">
           <div
-            class="relative grid [grid-template:'layer'] scale-y-[1.1] scale-x-[0.9] font-normal tracking-[-0.04em] whitespace-nowrap">
+            class="relative grid [grid-template:'layer'] scale-y-[1.0] scale-x-[0.9] font-normal tracking-[-0.04em] whitespace-nowrap">
             <span class="layer [grid-area:layer] translate-x-[6px] translate-y-[6px] text-primary-back">WEB</span>
             <span class="layer [grid-area:layer] translate-x-[3px] translate-y-[3px] text-primary-mid">WEB</span>
             <span class="layer [grid-area:layer] text-white z-[4] text-stroke text-stroke-primary">WEB</span>

@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
+    '@vueuse/motion/nuxt',
   ],
   css: [
     '@/assets/css/main.css',

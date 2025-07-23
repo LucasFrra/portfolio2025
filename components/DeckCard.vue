@@ -1,9 +1,9 @@
 <template>
 
   <NuxtLink
-    :to="link"
-    class="deck-card group absolute inset-0 m-auto w-[90vmin] sm:h-[55vmin] h-[80vmin] rounded-3xl overflow-hidden bg-slate-900 shadow-xl transition-transform duration-300 hover:scale-[1.03]"
-  >
+  :to="link"
+  class="deck-card group absolute top-[6rem] left-1/2 -translate-x-1/2 w-[90vmin] sm:h-[55vmin] h-[80vmin] rounded-3xl overflow-hidden bg-slate-900 shadow-xl transition-transform duration-300 hover:scale-[1.03]"
+>
     <img
       :src="img"
       alt=""
