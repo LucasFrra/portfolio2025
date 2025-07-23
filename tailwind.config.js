@@ -16,6 +16,17 @@ export default {
       scale: {
             '-100': '-1',
         },
+        keyframes: {
+        'curve-bounce-normal': {
+          '0%, 100%': { transform: 'translateY(0) rotate(0deg) scale(1)' },
+          '25%': { transform: 'translateY(-6px) rotate(-1deg) scale(1.02)' },
+          '50%': { transform: 'translateY(4px) rotate(1deg) scale(0.98)' },
+          '75%': { transform: 'translateY(-2px) rotate(-0.5deg) scale(1.01)' },
+        },
+      },
+      animation: {
+        'title-curve-normal': 'curve-bounce-normal 3.5s ease-in-out infinite',
+      },
     },
   },
   plugins: [
@@ -26,7 +37,7 @@ export default {
         },
         '.text-stroke-primary': {
           '-webkit-text-stroke-color': theme('colors.primary'),
-        },
+        }
       })
     }
   ],
