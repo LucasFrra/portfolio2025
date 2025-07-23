@@ -10,14 +10,11 @@
       <a href="mailto:contact@lucasferreira.fr">contact@lucasferreira.fr</a>
     </div>
   </div>
-
-  <ul class="hidden md:flex items-center gap-8 text-2xl uppercase text-primary tracking-wide">
-    <li v-for="l in links" :key="l.to">
-      <NuxtLink :to="l.to" class="transition hover:underline hover:opacity-80">
-        {{ l.label }}
-      </NuxtLink>
-    </li>
-  </ul>
+  <button v-show="!open" class=" flex flex-col gap-[6px] transition-all relative" @click="toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 </nav>
   </header>
 
