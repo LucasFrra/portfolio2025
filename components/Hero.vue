@@ -30,6 +30,7 @@
         </div>
       </h1>
     </div>
+    <TypingEffect />
   </section>
 </template>
 
