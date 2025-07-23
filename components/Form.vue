@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center px-4 py-20 bg-gradient-to-b from-white via-white to-zinc-100">
+  <div class="flex justify-center px-4 py-20 bg-gradient-to-b">
     <form
       v-motion
       :initial="{ opacity: 0, y: 50 }"

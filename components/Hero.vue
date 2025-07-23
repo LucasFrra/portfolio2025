@@ -1,5 +1,13 @@
 <template>
-  <section ref="hero" class="flex flex-col items-center py-12 overflow-hidden"
+  <div class="flex flex-col items-center">
+  <h1 class="text-5xl font-semibold text-center md:py-8 py-16 text-primary leading-tight">
+    <span class="block">Lucas</span>
+    <span class="block tracking-wider relative after:block after:mt-2 after:h-[2px] after:w-8 after:bg-primary after:mx-auto">
+      Ferreira
+    </span>
+  </h1>
+</div>
+  <section ref="hero" class="flex flex-col items-center pb-32 overflow-hidden"
     style="perspective:900px; transform-style:preserve-3d;">
     <div class="relative inline-block font-anton">
       <h1 ref="titleEl" class="relative text-center leading-none font-extrabold"
