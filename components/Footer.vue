@@ -12,7 +12,7 @@
     <div class="col-span-12 lg:col-span-6 space-y-4 lg:space-y-10 text-left">
       <div>
         <h3 class="font-black uppercase text-2xl">Disponibilités</h3>
-        <p class="-mt-1 text-lg">Lucas&nbsp;–&nbsp;Vendredi</p>
+        <p class="-mt-1 text-lg">Lundi&nbsp;–&nbsp;Vendredi</p>
       </div>
 
       <div>
