@@ -1,13 +1,13 @@
 <template>
-<Hero />
-<WorkDeck />
-<ContactForm />
+    <div>
+        <Hero />
+        <WorkDeck />
+        <ContactForm />
+    </div>
 </template>
 
 <script lang="ts" setup>
 
 </script>
 
-<style>
-
-</style>
+<style></style>

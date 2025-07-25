@@ -1,64 +1,63 @@
 <template>
-  <header class="sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto flex items-center justify-between px-10 py-3 font-semibold gap-10">
-  <div class="flex items-center gap-6">
-    <NuxtLink to="/">
-      <img src="/logo-placeholder.svg" class="h-14" />
-    </NuxtLink>
-
-    <div class="hidden md:flex items-center gap-2 text-2xl text-primary transition hover:underline hover:opacity-90">
-      <a href="mailto:contact@lucasferreira.fr">contact@lucasferreira.fr</a>
-    </div>
-  </div>
-  <button v-show="!open" class=" flex flex-col gap-[6px] transition-all relative" @click="toggle">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-</nav>
-  </header>
-
-  <Teleport to="body">
-    <Transition name="slide">
-      <div v-show="open"
-        class="fixed inset-0 z-[80] bg-primary text-white flex flex-col items-start justify-center px-6 pt-20 pb-10 gap-3 text-start font-bold uppercase">
-
-        <button @click="toggle" class="absolute top-5 right-6 z-[90] flex flex-col gap-[6px]">
-          <span :class="['bar', open && 'top-x']"></span>
-          <span :class="['bar', open && 'mid-x']"></span>
-          <span :class="['bar', open && 'bot-x']"></span>
-        </button>
-
-        <NuxtLink to="/" @click="toggle" class="absolute top-6 left-6">
-          <img src="/logo-placeholder-base-white.svg" class="h-12" />
-        </NuxtLink>
-
-        <div class="flex flex-col gap-2 text-7xl leading-[0.9] w-full">
-          <NuxtLink v-for="l in links" :key="l.to" :to="l.to" @click="toggle" :class="[
-            routePages.includes(currentPath)
-              ? (currentPath === l.to ? 'underline text-white' : 'text-white/50 hover:text-white')
-              : 'text-white',
-            'transition-colors'
-          ]">
-            {{ l.label }}
+    <header class="sticky top-0 z-50">
+      <nav class="max-w-7xl mx-auto flex items-center justify-between px-10 py-3 font-semibold gap-10">
+        <div class="flex items-center gap-6">
+          <NuxtLink to="/">
+            <img src="/logo-placeholder.svg" class="h-14" />
           </NuxtLink>
-        </div>
 
-        <div class="text-sm uppercase w-full">
-          <hr class="border-t border-white mb-2" />
-          <p class="opacity-70">Réseaux sociaux</p>
-          <div class="flex flex-col gap-1 font-semibold text-white text-2xl leading-[0.9] mt-2">
-            <a href="https://github.com/LucasFrra" target="_blank">Github</a>
-            <a href="https://linkedin.com/in/lucas-ferreira0511 " target="_blank">LinkedIn</a><br>
-            <a href="mailto:contact@lucasferreira.fr">➜ contact@lucasferreira.fr</a>
+          <div
+            class="hidden md:flex items-center gap-2 text-2xl text-primary transition hover:underline hover:opacity-90">
+            <a href="mailto:contact@lucasferreira.fr">contact@lucasferreira.fr</a>
           </div>
         </div>
+        <button v-show="!open" class=" flex flex-col gap-[6px] transition-all relative" @click="toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </nav>
+    </header>
 
-      </div>
-    </Transition>
-  </Teleport>
+    <Teleport to="body">
+      <Transition name="slide">
+        <div v-show="open"
+          class="fixed inset-0 z-[80] bg-primary text-white flex flex-col items-start justify-center px-6 pt-20 pb-10 gap-3 text-start font-bold uppercase">
 
+          <button @click="toggle" class="absolute top-5 right-6 z-[90] flex flex-col gap-[6px]">
+            <span :class="['bar', open && 'top-x']"></span>
+            <span :class="['bar', open && 'mid-x']"></span>
+            <span :class="['bar', open && 'bot-x']"></span>
+          </button>
 
+          <NuxtLink to="/" @click="toggle" class="absolute top-6 left-6">
+            <img src="/logo-placeholder-base-white.svg" class="h-12" />
+          </NuxtLink>
+
+          <div class="flex flex-col gap-2 text-7xl leading-[0.9] w-full">
+            <NuxtLink v-for="l in links" :key="l.to" :to="l.to" @click="toggle" :class="[
+              routePages.includes(currentPath)
+                ? (currentPath === l.to ? 'underline text-white' : 'text-white/50 hover:text-white')
+                : 'text-white',
+              'transition-colors'
+            ]">
+              {{ l.label }}
+            </NuxtLink>
+          </div>
+
+          <div class="text-sm uppercase w-full">
+            <hr class="border-t border-white mb-2" />
+            <p class="opacity-70">Réseaux sociaux</p>
+            <div class="flex flex-col gap-1 font-semibold text-white text-2xl leading-[0.9] mt-2">
+              <a href="https://github.com/LucasFrra" target="_blank">Github</a>
+              <a href="https://linkedin.com/in/lucas-ferreira0511 " target="_blank">LinkedIn</a><br>
+              <a href="mailto:contact@lucasferreira.fr">➜ contact@lucasferreira.fr</a>
+            </div>
+          </div>
+
+        </div>
+      </Transition>
+    </Teleport>
 </template>
 
 <script setup lang="ts">

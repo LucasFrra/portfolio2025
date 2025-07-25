@@ -1,36 +1,39 @@
 <template>
-  <div class="flex flex-col items-center">
-  <h1 class="text-5xl font-semibold text-center md:py-8 py-16 text-primary leading-tight">
-    <span class="block">Lucas</span>
-    <span class="block tracking-wider relative after:block after:mt-2 after:h-[2px] after:w-8 after:bg-primary after:mx-auto">
-      Ferreira
-    </span>
-  </h1>
-</div>
-  <section ref="hero" class="flex flex-col items-center pb-32 overflow-hidden"
-    style="perspective:900px; transform-style:preserve-3d;">
-    <div class="relative inline-block font-anton">
-      <h1 ref="titleEl" class="relative text-center leading-none font-extrabold"
-        style="transform-style:preserve-3d; font-size:24vmin; letter-spacing:-0.07em;">
-        <div class="relative flex flex-col items-center overflow-hidden">
-          <div
-            class="relative grid [grid-template:'layer'] scale-y-[1.0] scale-x-[0.9] font-normal tracking-[-0.04em] whitespace-nowrap">
-            <span class="layer [grid-area:layer] translate-x-[6px] translate-y-[6px] text-primary-back">WEB</span>
-            <span class="layer [grid-area:layer] translate-x-[3px] translate-y-[3px] text-primary-mid">WEB</span>
-            <span class="layer [grid-area:layer] text-white z-[4] text-stroke text-stroke-primary">WEB</span>
-          </div>
-          <div
-            class="relative grid [grid-template:'layer'] scale-y-[1.1] scale-x-[0.9] font-normal tracking-[-0.04em] whitespace-nowrap mt-2">
-            <span
-              class="layer [grid-area:layer] translate-x-[6px] translate-y-[6px] text-green-500/50 z-[2]">DEVELOPER</span>
-            <span
-              class="layer [grid-area:layer] translate-x-[3px] translate-y-[3px] text-green-500/75 z-[3]">DEVELOPER</span>
-            <span class="layer [grid-area:layer] text-white z-[4] text-stroke text-stroke-primary">DEVELOPER</span>
-          </div>
-        </div>
+  <section>
+    <div class="flex flex-col items-center">
+      <h1 class="text-5xl font-semibold text-center md:py-8 py-16 text-primary leading-tight">
+        <span class="block">Lucas</span>
+        <span
+          class="block tracking-wider relative after:block after:mt-2 after:h-[2px] after:w-8 after:bg-primary after:mx-auto">
+          Ferreira
+        </span>
       </h1>
     </div>
-    <TypingEffect />
+    <div ref="hero" class="flex flex-col items-center pb-32 overflow-hidden"
+      style="perspective:900px; transform-style:preserve-3d;">
+      <div class="relative inline-block font-anton">
+        <h1 ref="titleEl" class="relative text-center leading-none font-extrabold"
+          style="transform-style:preserve-3d; font-size:24vmin; letter-spacing:-0.07em;">
+          <div class="relative flex flex-col items-center overflow-hidden">
+            <div
+              class="relative grid [grid-template:'layer'] scale-y-[1.0] scale-x-[0.9] font-normal tracking-[-0.04em] whitespace-nowrap">
+              <span class="layer [grid-area:layer] translate-x-[6px] translate-y-[6px] text-primary-back">WEB</span>
+              <span class="layer [grid-area:layer] translate-x-[3px] translate-y-[3px] text-primary-mid">WEB</span>
+              <span class="layer [grid-area:layer] text-white z-[4] text-stroke text-stroke-primary">WEB</span>
+            </div>
+            <div
+              class="relative grid [grid-template:'layer'] scale-y-[1.1] scale-x-[0.9] font-normal tracking-[-0.04em] whitespace-nowrap mt-2">
+              <span
+                class="layer [grid-area:layer] translate-x-[6px] translate-y-[6px] text-green-500/50 z-[2]">DEVELOPER</span>
+              <span
+                class="layer [grid-area:layer] translate-x-[3px] translate-y-[3px] text-green-500/75 z-[3]">DEVELOPER</span>
+              <span class="layer [grid-area:layer] text-white z-[4] text-stroke text-stroke-primary">DEVELOPER</span>
+            </div>
+          </div>
+        </h1>
+      </div>
+      <TypingEffect />
+    </div>
   </section>
 </template>
 

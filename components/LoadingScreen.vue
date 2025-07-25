@@ -1,9 +1,9 @@
 <template>
-  <transition name="fade">
+  <Transition name="fade">
     <div v-if="visible" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black text-white">
       <h1 class="text-5xl font-extrabold tracking-widest animate-pulse">LUCAS</h1>
     </div>
-  </transition>
+  </Transition>
 </template>
 
 <script setup lang="ts">

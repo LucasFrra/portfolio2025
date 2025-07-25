@@ -1,8 +1,10 @@
 <template>
-  <div class="mt-6 h-[3rem] sm:h-[4rem] text-center text-primary text-xl sm:text-2xl">
-    <span>{{ currentText }}</span><span class="inline-block animate-blink">|</span>
-    <p v-if="isEasterEgg" class="text-xs sm:text-sm text-yellow-400 mt-1">Tu as trouvé la phrase cachée ! (0.1%)</p>
-  </div>
+  <section>
+    <div class="mt-6 h-[3rem] sm:h-[4rem] text-center text-primary text-xl sm:text-2xl">
+      <span>{{ currentText }}</span><span class="inline-block animate-blink">|</span>
+      <p v-if="isEasterEgg" class="text-xs sm:text-sm text-yellow-400 mt-1">Tu as trouvé la phrase cachée ! (0.1%)</p>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -78,8 +80,15 @@ onMounted(() => {
 
 <style scoped>
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .animate-blink {
