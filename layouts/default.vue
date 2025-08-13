@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col relative">
-    <AnimatedMeshBackground :colors="['#16a34a', '#22d3ee', '#84cc16']" :opacity="0.26" blend="soft-light" pattern="dots"
+    <AnimatedMeshBackground :colors="['#16a34a', '#16a34a', '#16a34a']" :opacity="0.66" blend="soft-light" pattern="dots"
       :patternOpacity="0.18" :patternSize="30" patternBlend="soft-light" />
     <LoadingScreen />
     <Nav />
