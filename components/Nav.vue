@@ -11,7 +11,16 @@
             <a href="mailto:contact@lucasferreira.fr">contact@lucasferreira.fr</a>
           </div>
         </div>
-        <button v-show="!open" class=" flex flex-col gap-[6px] transition-all relative" @click="toggle">
+        <button
+          v-show="!open"
+          ref="triggerBtn"
+          class=" flex flex-col gap-[6px] transition-all relative"
+          @click="toggle"
+          :aria-expanded="open"
+          aria-haspopup="dialog"
+          aria-controls="mobile-menu"
+          aria-label="Ouvrir le menu"
+        >
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -22,9 +31,24 @@
     <Teleport to="body">
       <Transition name="slide">
         <div v-show="open"
-          class="fixed inset-0 z-[80] bg-primary text-white flex flex-col items-start justify-center px-6 pt-20 pb-10 gap-3 text-start font-bold uppercase">
+          id="mobile-menu"
+          ref="menuPanel"
+          class="fixed inset-0 z-[80] bg-primary text-white flex flex-col items-start justify-center px-6 pt-20 pb-10 gap-3 text-start font-bold uppercase"
+          role="dialog"
+          aria-modal="true"
+          :aria-hidden="!open"
+          tabindex="-1"
+          @keydown.esc.prevent="toggle"
+        >
 
-          <button @click="toggle" class="absolute top-5 right-6 z-[90] flex flex-col gap-[6px]">
+          <button
+            ref="closeBtn"
+            @click="toggle"
+            class="absolute top-5 right-6 z-[90] flex flex-col gap-[6px]"
+            :aria-expanded="open"
+            aria-label="Fermer le menu"
+            aria-controls="mobile-menu"
+          >
             <span :class="['bar', open && 'top-x']"></span>
             <span :class="['bar', open && 'mid-x']"></span>
             <span :class="['bar', open && 'bot-x']"></span>
@@ -61,10 +85,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { ref, watch, nextTick } from 'vue'
 const currentPath = ref('')
 const open = ref(false)
 const routePages = ['/about', '/work', '/contact']
+const triggerBtn = ref<HTMLButtonElement | null>(null)
+const closeBtn = ref<HTMLButtonElement | null>(null)
+const menuPanel = ref<HTMLElement | null>(null)
 
 const links = [
   { label: 'À PROPOS', to: '/about' },
@@ -74,7 +101,15 @@ const links = [
 const toggle = () => (open.value = !open.value)
 watch(open, (v) => {
   document.documentElement.classList.toggle('overflow-hidden', v)
-  if (v) currentPath.value = window.location.pathname
+  if (v) {
+    currentPath.value = window.location.pathname
+    nextTick(() => {
+      // Focus close button or panel for accessibility
+      (closeBtn.value ?? menuPanel.value)?.focus()
+    })
+  } else {
+    nextTick(() => triggerBtn.value?.focus())
+  }
 })
 </script>
 
@@ -108,3 +143,4 @@ watch(open, (v) => {
   opacity: 0;
 }
 </style>
+

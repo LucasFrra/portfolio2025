@@ -9,12 +9,25 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-const visible = ref(true)
+// Use a cookie so SSR can read it and avoid flicker (no deprecated checks)
+const hasLoadedCookie = useCookie<string>('lf_hasLoadedOnce', {
+  default: () => '0',
+  sameSite: 'lax'
+})
+
+// Compute visibility synchronously (works both on SSR and client)
+const visible = ref(hasLoadedCookie.value !== '1')
 
 onMounted(() => {
-  setTimeout(() => {
-    visible.value = false
-  }, 1500)
+  if (visible.value) {
+    // Prevent background scroll while the overlay is visible
+    document.body.classList.add('overflow-hidden')
+    setTimeout(() => {
+      visible.value = false
+      document.body.classList.remove('overflow-hidden')
+      hasLoadedCookie.value = '1'
+    }, 1500)
+  }
 })
 </script>
 
