@@ -19,8 +19,8 @@ const phrases = [
   { text: 'Je développe des projets utiles et durables', rare: false },
   { text: 'Je crée des expériences utilisateur mémorables', rare: false },
   { text: 'Je construis des sites web qui font la différence', rare: false },
-  { text: 'J’ai codé ceci pendant un orage, à mains nues', rare: true },
-  { text: 'Ce site est propulsé par du café glacé et du courage', rare: true }
+  { text: 'Si ce texte s’affiche, tu gagnes… mon respect', rare: true },
+  { text: 'Pas peur de déployer un vendredi… enfin presque', rare: true }
 ]
 
 const rareProbability = 0.001 // 0.1%
