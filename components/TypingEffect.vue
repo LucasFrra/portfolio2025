@@ -36,18 +36,25 @@ let holdTime = 1000
 
 function pickNextPhrase() {
   const isRareRoll = Math.random() < rareProbability
-  let nextIndex = -1
+  let pool = isRareRoll
+    ? phrases.filter(p => p.rare)
+    : phrases.filter(p => !p.rare)
 
+  if (pool.length === 0) pool = phrases
+
+  let nextIndex = -1
   do {
-    nextIndex = Math.floor(Math.random() * phrases.length)
+    nextIndex = Math.floor(Math.random() * pool.length)
   } while (nextIndex === lastPhraseIndex)
 
-  phraseIndex = nextIndex
+  const chosen = pool[nextIndex]
+  phraseIndex = phrases.indexOf(chosen)
   lastPhraseIndex = phraseIndex
 
-  isEasterEgg.value = isRareRoll && phrases[phraseIndex].rare
+  isEasterEgg.value = chosen.rare
   holdTime = isEasterEgg.value ? 180000 : 1000
 }
+
 
 function type() {
   const currentPhrase = phrases[phraseIndex].text
