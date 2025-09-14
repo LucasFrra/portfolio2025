@@ -59,8 +59,10 @@ const deck = ref<HTMLElement>()
 const cardRefs = ref<any[]>([])
 
 onMounted(() => {
-  const isMobile = window.innerWidth < 768
-  if (isMobile) return // 📱 Sur mobile, pas d'animation GSAP
+  const isPortrait = window.matchMedia("(orientation: portrait)").matches
+  const isSmallScreen = window.innerWidth < 1024
+  const isMobile = isSmallScreen || isPortrait
+  if (isMobile) return
 
   const cards = [...deck.value!.querySelectorAll<HTMLElement>('.deck-card')]
 
