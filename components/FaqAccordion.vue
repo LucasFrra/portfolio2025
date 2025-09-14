@@ -1,6 +1,8 @@
 <template>
-  <section class="max-w-4xl mx-auto px-6 py-16">
-    <h2 class="w-full text-center text-primary font-extrabold z-30 animate-title-curve-normal text-5xl md:text-6xl mt-6 md:mt-0 px-4 md:px-0 mb-16">
+  <section class="max-w-4xl mx-auto px-6 py-16 rounded-3xl shadow-sm">
+    <h2
+      class="w-full text-center text-primary font-extrabold z-30 animate-title-curve-normal text-5xl md:text-6xl mt-6 md:mt-0 px-4 md:px-0 mb-16"
+    >
       Questions fréquentes
     </h2>
 
@@ -8,7 +10,7 @@
       <li
         v-for="(item, index) in faq"
         :key="index"
-        class="border border-zinc-200 rounded-xl overflow-hidden"
+        class="border border-zinc-200 rounded-xl overflow-hidden bg-white shadow-sm"
       >
         <button
           @click="toggle(index)"
@@ -22,8 +24,7 @@
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M19 9l-7 7-7-7" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
 
@@ -39,7 +40,6 @@
     </ul>
   </section>
 </template>
-
 <script setup>
 import { ref } from 'vue'
 
@@ -51,29 +51,29 @@ function toggle(index) {
 
 const faq = [
   {
-    question: "Quels types de projets tu acceptes ?",
+    question: "Pourquoi tu cherches un CDI ?",
     answer:
-      "Je travaille sur différents projets web : site vitrine, outils sur-mesure, refonte, maintenance... Si t’as un doute, le mieux c’est d’en discuter directement.",
+      "Je veux rejoindre une équipe sur le long terme pour continuer à progresser, partager mes compétences et contribuer à des projets ambitieux.",
   },
   {
-    question: "Comment ça se passe si on veut bosser ensemble ?",
+    question: "Tu préfères travailler en remote ou sur site ?",
     answer:
-      "On échange d’abord pour comprendre ton projet, puis je te propose une solution claire adaptée à ce que tu veux faire.",
+      "J'aime le télétravail pour la concentration, mais je reste ouvert à venir sur place pour l'intégration et les moments importants.",
   },
   {
-    question: "Est-ce qu’on peut te contacter même si le projet n’est pas encore prêt ?",
+    question: "Qu’est-ce qui te passionne dans ton métier ?",
     answer:
-      "Bien sûr ! Tu peux me contacter même si ce n’est qu’une idée. On peut voir ensemble ce qui est faisable, et comment avancer.",
+      "La création. Voir une idée devenir une application utilisée, c’est ce qui me motive. J’aime aussi les technos modernes et le clean code.",
   },
   {
-    question: "Tu es dispo après le projet ?",
+    question: "Ton style de travail en équipe ?",
     answer:
-      "Oui. Je peux intervenir ponctuellement ou proposer un suivi selon les besoins.",
+      "Communicatif, autonome, mais j’aime échanger souvent avec mes collègues pour avancer dans la même direction.",
   },
   {
-    question: "Et pour les tarifs ?",
+    question: "Un projet dont tu es fier ?",
     answer:
-      "Chaque projet est différent, donc ça dépend du besoin. Le mieux, c’est de m’expliquer ce que tu veux faire, et je te dis ce que je peux proposer.",
+      "Ce portfolio animé avec Nuxt et GSAP, vitrine de mon style et de ma vision du code.",
   },
 ]
 </script>

@@ -11,16 +11,16 @@
 import { ref, onMounted } from 'vue'
 
 const phrases = [
-  { text: 'Je conçois des interfaces simples et efficaces', rare: false },
-  { text: 'Je développe des solutions sur-mesure', rare: false },
-  { text: 'Je structure, je développe, je livre', rare: false },
-  { text: 'Je m’adapte à chaque client, chaque projet', rare: false },
-  { text: 'Je t’aide à aller droit au but avec ton site', rare: false },
-  { text: 'Je développe des projets utiles et durables', rare: false },
-  { text: 'Je crée des expériences utilisateur mémorables', rare: false },
-  { text: 'Je construis des sites web qui font la différence', rare: false },
-  { text: 'Si ce texte s’affiche, tu gagnes… mon respect', rare: true },
-  { text: 'Pas peur de déployer un vendredi… enfin presque', rare: true }
+  { text: "Je conçois des interfaces simples et efficaces", rare: false },
+  { text: "Je développe des applications web robustes", rare: false },
+  { text: "Je structure, je développe, je livre", rare: false },
+  { text: "Je m’adapte à chaque équipe et chaque projet", rare: false },
+  { text: "J’aime résoudre des problèmes complexes", rare: false },
+  { text: "Je crée des expériences utilisateur intuitives", rare: false },
+  { text: "Je fais du code propre et maintenable", rare: false },
+  { text: "Je construis des solutions qui durent", rare: false },
+  { text: "Ce texte est plus rare qu’un build qui passe du premier coup.", rare: true },
+  { text: "Pas peur de déployer un vendredi… enfin presque", rare: true }
 ]
 
 const rareProbability = 0.001 // 0.1%

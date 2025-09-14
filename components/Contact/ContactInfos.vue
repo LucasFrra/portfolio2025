@@ -29,42 +29,42 @@
 import {
   MapPin,
   Calendar,
-  FolderKanban,
-  Wrench,
-  MessageSquare,
-  ShieldCheck,
+  Briefcase,
+  Code2,
+  GraduationCap,
+  Rocket,
 } from 'lucide-vue-next'
 
 const infos = [
   {
     title: 'Localisation',
-    content: 'Je suis basé à Amiens (Hauts-de-France) et je travaille à distance avec des clients dans toute la France.',
+    content: "Basé à Amiens (Hauts-de-France). Ouvert aux postes en télétravail ou sur la région.",
     icon: MapPin,
   },
   {
     title: 'Disponibilité',
-    content: 'Je suis disponible du lundi au vendredi et je réponds en général sous 24h.',
+    content: "Actuellement disponible immédiatement pour un poste en CDI dans le développement web.",
     icon: Calendar,
   },
   {
-    title: 'Types de projets',
-    content: 'Sites vitrines, plateformes sur-mesure, applications web, maintenance technique. Je m’adapte selon les besoins.',
-    icon: FolderKanban,
+    title: 'Expérience',
+    content: "Plus de 3 ans d'expérience en alternance et projets variés, du site vitrine aux plateformes sur-mesure.",
+    icon: Briefcase,
   },
   {
     title: 'Compétences techniques',
-    content: 'PHP, Laravel, Vue.js, Nuxt, Tailwind CSS, WordPress, Firestore, API... Je choisis les bons outils selon le projet.',
-    icon: Wrench,
+    content: "PHP, Laravel, Vue.js, Nuxt, Tailwind CSS, WordPress, MySQL, API. Solide expérience full-stack.",
+    icon: Code2,
   },
   {
-    title: 'Méthode de travail',
-    content: 'On échange sur votre besoin, je vous propose une solution claire, puis on avance étape par étape jusqu’à la mise en ligne.',
-    icon: MessageSquare,
+    title: 'Formation',
+    content: "Diplômé d'un Master MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises).",
+    icon: GraduationCap,
   },
   {
-    title: 'Engagements',
-    content: 'Je travaille avec sérieux et transparence. Mon objectif : un projet solide, qui vous ressemble, livré dans de bonnes conditions.',
-    icon: ShieldCheck,
+    title: 'Objectif',
+    content: "Rejoindre une équipe dynamique pour concevoir des applications utiles, performantes et évolutives.",
+    icon: Rocket,
   },
 ]
 </script>

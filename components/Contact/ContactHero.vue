@@ -7,9 +7,10 @@
       </h1>
 
       <p class="mt-4 text-zinc-700 text-lg">
-        Développeur web, je vous accompagne dans vos projets de création ou d’évolution de site.
-        Utilisez le formulaire ci-dessous pour me présenter votre besoin, je vous répondrai rapidement.
+        Développeur web passionné, je suis actuellement à la recherche d’un poste en CDI.
+        N’hésitez pas à me contacter pour échanger autour de vos projets ou opportunités.
       </p>
+
       <p class="mt-8 text-xl font-semibold text-primary">
         👉 <a href="mailto:contact@lucasferreira.fr" class="underline hover:text-green-700 transition">
           contact@lucasferreira.fr
@@ -18,10 +19,6 @@
     </div>
   </section>
 </template>
-
-
-
-
 
 <script lang="ts" setup>
 
