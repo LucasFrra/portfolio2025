@@ -1,7 +1,7 @@
 <template>
   <section class="py-16">
     <h2
-      class="w-full text-center text-primary font-extrabold z-30 animate-title-curve-normal text-3xl md:text-6xl mt-6 md:mt-0 px-4 md:px-0 mb-16">
+      class="w-full text-center text-primary font-extrabold z-30 animate-title-curve-normal text-5xl md:text-6xl mt-6 md:mt-0 px-4 md:px-0 mb-16">
       On bosse ensemble ?
     </h2>
 
