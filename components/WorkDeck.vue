@@ -32,8 +32,8 @@ const projects = [
   {
     id: 1,
     title: 'Mon Portfolio',
-    img: 'https://images.unsplash.com/photo-1508138221679-760a23a2285b?q=80',
-    link: '/projects/1',
+    img: '/projects/mon-portfolio/portfolio-presentation.webp',
+    link: '/projects/mon-portfolio',
     description: 'Un portfolio minimaliste avec Nuxt 3, GSAP et animations 3D.',
     tags: ['Nuxt 3', 'GSAP', 'Tailwind']
   },
@@ -41,7 +41,7 @@ const projects = [
     id: 2,
     title: 'App Courses',
     img: 'https://images.unsplash.com/photo-1542744173-05336fcc7ad4?q=80',
-    link: '/projects/2',
+    link: '/projects/app-courses',
     description: 'Une appli pour générer ta liste de courses à partir de plats.',
     tags: ['Laravel', 'Vue 3', 'PWA']
   },
@@ -49,7 +49,7 @@ const projects = [
     id: 3,
     title: 'Système BAT',
     img: 'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80',
-    link: '/projects/3',
+    link: '/projects/systeme-bat',
     description: 'Validation en ligne de BAT avec liens sécurisés, historique et alertes.',
     tags: ['PHP', 'Firebase', 'Sécurité']
   }
@@ -60,7 +60,7 @@ const cardRefs = ref<any[]>([])
 
 onMounted(() => {
   const isPortrait = window.matchMedia("(orientation: portrait)").matches
-  const isSmallScreen = window.innerWidth < 1024
+  const isSmallScreen = window.innerWidth < 768
   const isMobile = isSmallScreen || isPortrait
   if (isMobile) return
 
