@@ -53,7 +53,7 @@ const infos = [
   },
   {
     title: 'Compétences techniques',
-    content: "PHP, Laravel, Vue.js, Nuxt, Tailwind CSS, WordPress, MySQL, API. Solide expérience full-stack.",
+    content: "React, PHP, Laravel, Vue.js, Nuxt, Tailwind CSS, WordPress, MySQL, API. Solide expérience full-stack.",
     icon: Code2,
   },
   {

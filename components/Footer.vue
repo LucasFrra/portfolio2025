@@ -27,7 +27,7 @@
       <div
         class="col-span-12 lg:col-span-6 lg:flex lg:flex-col lg:items-end space-y-4 lg:space-y-10 text-left lg:text-right">
         <div class="space-y-2 lg:space-y-4">
-          <h3 class="font-black uppercase text-2xl">Un projet en tête ?</h3>
+          <h3 class="font-black uppercase text-2xl">Me contacter ?</h3>
           <a href="mailto:contact@lucasferreira.fr"
             class="inline-flex items-center gap-2 text-lg underline hover:no-underline">
             ➜ contact@lucasferreira.fr

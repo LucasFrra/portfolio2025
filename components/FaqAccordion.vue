@@ -58,12 +58,12 @@ const faq = [
   {
     question: "Tu préfères travailler en remote ou sur site ?",
     answer:
-      "J'aime le télétravail pour la concentration, mais je reste ouvert à venir sur place pour l'intégration et les moments importants.",
+      "J'aime le télétravail pour la concentration, mais je reste ouvert à venir sur place pour l'intégration et les moments importants ou si une opportunité se présenterait sur Amiens et sa région.",
   },
   {
     question: "Qu’est-ce qui te passionne dans ton métier ?",
     answer:
-      "La création. Voir une idée devenir une application utilisée, c’est ce qui me motive. J’aime aussi les technos modernes et le clean code.",
+      "La création. Voir une idée devenir une application utilisée, c’est ce qui me motive. J’aime aussi apprendre de nouvelles technologies et relever des défis techniques.",
   },
   {
     question: "Ton style de travail en équipe ?",
