@@ -9,7 +9,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <img
         src="/projects/sawar/plateforme-fichiers-3d-2.webp"
-        alt="Projet hero"
+        alt="Sawar hero image"
         class="rounded-xl w-full mb-16 border-4 border-[#BF0BDD]"
       />
     </div>
@@ -40,7 +40,7 @@
       <div class="max-w-6xl mx-auto px-6">
       <img
         src="/projects/sawar/plateforme-fichiers-3d.webp"
-        alt="Aperçu animé du projet"
+        alt="Sawar platform image"
         class="rounded-xl w-full"
       />
       </div>

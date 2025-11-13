@@ -9,7 +9,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <img
         src="/projects/pizza-luna/site-vitrine-pizza-luna-2.webp"
-        alt="Projet hero"
+        alt="Pizza Luna hero image"
         class="rounded-xl w-full mb-16 border-4 border-[#d9a647]"
       />
     </div>
@@ -40,7 +40,7 @@
       <div class="max-w-6xl mx-auto px-6">
       <img
         src="/projects/pizza-luna/site-vitrine-pizza-luna-3.webp"
-        alt="Aperçu animé du projet"
+        alt="Pizza Luna website image"
         class="rounded-xl w-full"
       />
       </div>

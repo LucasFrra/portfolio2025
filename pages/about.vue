@@ -11,7 +11,7 @@
         </div>
 
         <div class="max-w-4xl mx-auto px-6 mb-28 flex flex-col items-center">
-            <img src="/lucas-ferreira.webp" alt="Lucas Ferreira" class="w-full max-w-md rounded-lg shadow-xl object-cover 
+            <img src="/lucas-ferreira.webp" alt="Lucas Ferreira Profile" class="w-full max-w-md rounded-lg shadow-xl object-cover 
                              hover:scale-[1.01] transition-all duration-500" />
         </div>
         <div class="max-w-7xl mx-auto px-6 mb-40">

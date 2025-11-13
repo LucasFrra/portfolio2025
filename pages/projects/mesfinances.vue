@@ -9,7 +9,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <img
         src="/projects/mesfinances/gestion-budget-2.webp"
-        alt="Projet hero"
+        alt="Mes Finances hero image"
         class="rounded-xl w-full mb-16 border-4 border-[#333333]"
       />
     </div>
@@ -35,15 +35,5 @@
         </p>
       </div>
     </section>
-
-    <!-- <div class="bg-[#333333] py-12 mb-20">
-      <div class="max-w-6xl mx-auto px-6">
-      <img
-        src="/projects/pizza-luna/site-vitrine-pizza-luna-3.webp"
-        alt="Aperçu animé du projet"
-        class="rounded-xl w-full"
-      />
-      </div>
-    </div> -->
   </section>
 </template>

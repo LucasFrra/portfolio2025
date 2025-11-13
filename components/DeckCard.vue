@@ -6,7 +6,7 @@
     >
       <img
         :src="img"
-        alt=""
+        :alt="title"
         class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-50 transition duration-300"
       />
       <div
