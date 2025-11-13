@@ -23,10 +23,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import gsap from 'gsap'
-import { Flip } from 'gsap/Flip'
-
-gsap.registerPlugin(Flip)
+const { $gsap } = useNuxtApp()
 
 const projects = [
   {
@@ -67,7 +64,7 @@ onMounted(() => {
   const cards = [...deck.value!.querySelectorAll<HTMLElement>('.deck-card')]
 
   const bottomCard = cards.pop()!
-  gsap.set(bottomCard, {
+  $gsap.set(bottomCard, {
     position: 'absolute',
     top: '50%',
     left: '50%',
@@ -77,14 +74,14 @@ onMounted(() => {
     zIndex: 1
   })
 
-  gsap.set(cards, {
+  $gsap.set(cards, {
     rotate: () => Math.random() * 6 - 3,
     zIndex: (i: number) => cards.length - i + 1
   })
 
   const endDistance = '+=' + cards.length * 30 + '%'
 
-  gsap.to(cards, {
+  $gsap.to(cards, {
     x: (i: number) => (i % 2 ? '100vw' : '-100vw'),
     rotate: (i: number) => (i % 2 ? 15 : -15),
     stagger: { each: 0.12 },

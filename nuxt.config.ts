@@ -1,10 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-25',
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@vueuse/motion/nuxt',
-  ],
+  modules: ['@nuxtjs/tailwindcss', '@vueuse/motion/nuxt', '@nuxtjs/sitemap'],
   css: [
     '@/assets/css/main.css',
   ],
@@ -13,6 +10,10 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  site: {
+    url: 'https://lucasferreira.fr',
+    name: 'Lucas Ferreira — Développeur Web',
   },
   devtools: { enabled: true },
   app: {
@@ -44,7 +45,7 @@ export default defineNuxtConfig({
   },
   vite: {
     server: {
-      allowedHosts: ['bf7227032fc7.ngrok-free.app'],
+      allowedHosts: ['localhost', 'lucasferreira.fr', 'www.lucasferreira.fr'],
     },
   },
 })

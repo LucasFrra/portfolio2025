@@ -39,7 +39,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { gsap } from 'gsap'
+const { $gsap } = useNuxtApp()
 
 const hero = ref<HTMLElement>()
 const titleEl = ref<HTMLElement>()
@@ -58,7 +58,7 @@ onMounted(() => {
     raf = requestAnimationFrame(() => {
       const pctX = (e.clientX / window.innerWidth - 0.5) * 2
       const pctY = (e.clientY / window.innerHeight - 0.5) * 2
-      gsap.to(title, {
+      $gsap.to(title, {
         rotateX: pctY * tiltRange,
         rotateY: pctX * tiltRange,
         transformPerspective: 1000,
@@ -66,7 +66,7 @@ onMounted(() => {
         ease: 'power2.out'
       })
       layers.forEach((el, i) =>
-        gsap.to(el, {
+        $gsap.to(el, {
           x: -pctX * layerShift * layerDepth[i % 3],
           y: -pctY * layerShift * layerDepth[i % 3],
           duration: .4,

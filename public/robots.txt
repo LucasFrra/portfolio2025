@@ -1,2 +1,3 @@
-User-Agent: *
-Disallow:
+User-agent: *
+Allow: /
+Sitemap: https://lucasferreira.fr/sitemap.xml
