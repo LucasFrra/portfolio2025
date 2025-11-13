@@ -35,23 +35,23 @@ const projects = [
     img: '/projects/sawar/plateforme-fichiers-3d.webp',
     link: '/projects/sawar',
     description: 'Une plateforme pour gérer et visualiser des fichiers 3D.',
-    tags: ['Laravel', 'JS', 'Bootstrap']
+    tags: ['Laravel', 'Firebase', 'Bootstrap']
   },
   {
     id: 2,
-    title: 'App Courses',
-    img: 'https://images.unsplash.com/photo-1542744173-05336fcc7ad4?q=80',
-    link: '/projects/app-courses',
-    description: 'Une appli pour générer ta liste de courses à partir de plats.',
-    tags: ['Laravel', 'Vue 3', 'PWA']
+    title: 'Site vitrine',
+    img: '/projects/pizza-luna/site-vitrine-pizza-luna.webp',
+    link: '/projects/pizza-luna',
+    description: 'Site vitrine pour une pizzeria locale, optimisé pour le SEO.',
+    tags: ['Wordpress', 'PHP', 'SEO']
   },
   {
     id: 3,
-    title: 'Système BAT',
-    img: 'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80',
-    link: '/projects/systeme-bat',
-    description: 'Validation en ligne de BAT avec liens sécurisés, historique et alertes.',
-    tags: ['PHP', 'Firebase', 'Sécurité']
+    title: 'Application de gestion de budget',
+    img: '/projects/mesfinances/gestion-budget.webp',
+    link: '/projects/mesfinances',
+    description: 'Application web pour suivre et gérer ses finances personnelles.',
+    tags: ['React', 'TypeScript', 'GraphQL']
   }
 ]
 
