@@ -31,11 +31,11 @@ gsap.registerPlugin(Flip)
 const projects = [
   {
     id: 1,
-    title: 'Mon Portfolio',
-    img: '/projects/mon-portfolio/portfolio-presentation.webp',
-    link: '/projects/mon-portfolio',
-    description: 'Un portfolio minimaliste avec Nuxt 3, GSAP et animations 3D.',
-    tags: ['Nuxt 3', 'GSAP', 'Tailwind']
+    title: 'Plateforme de gestion de fichier 3D',
+    img: '/projects/sawar/plateforme-fichiers-3d.webp',
+    link: '/projects/sawar',
+    description: 'Une plateforme pour gérer et visualiser des fichiers 3D.',
+    tags: ['Laravel', 'JS', 'Bootstrap']
   },
   {
     id: 2,
