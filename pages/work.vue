@@ -1,36 +1,58 @@
 <template>
-    <div class="min-h-screen p-8">
-        <div class="max-w-6xl mx-auto">
-            <h1 class="text-6xl font-bold mb-4 text-gray-900">Mes projets récents</h1>
-            <p class="text-xl mb-12 text-gray-700">Découvrez mes projets récents</p>
+    <div>
+        <Head>
+            <title>Mes projets | Lucas Ferreira – Développeur web full stack</title>
+            <meta name="description"
+                content="Découvrez plusieurs projets que j’ai réalisés : sites vitrines, applications web, outils sur-mesure... chaque projet est unique, mais toujours structuré et bien pensé." />
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div v-for="project in projects" :key="project.id"
-                    class="border border-gray-300 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 bg-white">
-                    <div>
-                        <img :src="project.img" :alt="project.title" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2 text-gray-900">{{ project.title }}</h3>
-                        <p class="text-gray-600 mb-4">{{ project.description }}</p>
-                        <div class="mt-2 flex flex-wrap gap-2 mb-4">
-                            <span v-for="tag in project.tags" :key="tag"
-                                class="text-xs bg-gray-100 border border-gray-200 px-3 py-1 rounded-full text-gray-700">
-                                {{ tag }}
-                            </span>
+            <!-- Open Graph -->
+            <meta property="og:title" content="Mes projets | Lucas Ferreira – Développeur web full stack" />
+            <meta property="og:description"
+                content="Parcourez une sélection de mes projets récents : développement web, front, back, design UI/UX, SEO et plus encore." />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://lucasferreira.fr/work" />
+            <meta property="og:image" content="https://lucasferreira.fr/og_lucas_ferreira_developpeur_web.png" />
+
+            <!-- Twitter Card -->
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Mes projets | Lucas Ferreira – Développeur web full stack" />
+            <meta name="twitter:description"
+                content="Développeur web curieux et polyvalent. Voici une sélection de projets que j’ai réalisés avec soin et rigueur." />
+            <meta name="twitter:image" content="https://lucasferreira.fr/og_lucas_ferreira_developpeur_web.png" />
+        </Head>
+
+        <div class="min-h-screen p-8">
+            <div class="max-w-6xl mx-auto">
+                <h1 class="text-6xl font-bold mb-4 text-gray-900">Mes projets récents</h1>
+                <p class="text-xl mb-12 text-gray-700">Découvrez mes projets récents</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div v-for="project in projects" :key="project.id"
+                        class="border border-gray-300 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 bg-white">
+                        <div>
+                            <img :src="project.img" :alt="project.title" class="w-full h-48 object-cover">
                         </div>
-                        <NuxtLink :to="project.link"
-                            :class="`inline-block mt-4 px-6 py-2 border border-gray-900 text-gray-900 rounded-lg transition-all duration-300 ${project.hover}`">
-                            Voir le projet →
-                        </NuxtLink>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">{{ project.title }}</h3>
+                            <p class="text-gray-600 mb-4">{{ project.description }}</p>
+                            <div class="mt-2 flex flex-wrap gap-2 mb-4">
+                                <span v-for="tag in project.tags" :key="tag"
+                                    class="text-xs bg-gray-100 border border-gray-200 px-3 py-1 rounded-full text-gray-700">
+                                    {{ tag }}
+                                </span>
+                            </div>
+                            <NuxtLink :to="project.link"
+                                :class="`inline-block mt-4 px-6 py-2 border border-gray-900 text-gray-900 rounded-lg transition-all duration-300 ${project.hover}`">
+                                Voir le projet →
+                            </NuxtLink>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </template>
-
-
 
 <script lang="ts" setup>
 const projects = [
