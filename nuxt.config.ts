@@ -25,6 +25,7 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'theme-color', content: '#22c55e' },
         { name: 'description', content: 'Portfolio de Lucas Ferreira, développeur web. Projets, contact et informations.' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         // Open Graph
         { property: 'og:type', content: 'website' },
         { property: 'og:locale', content: 'fr_FR' },

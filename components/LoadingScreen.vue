@@ -24,6 +24,7 @@ onMounted(() => {
       visible.value = false
       hasLoaded.value = "1"
       document.body.classList.remove("overflow-hidden")
+      document.documentElement.classList.add("no-loading")
     }, 1800)
   })
 })

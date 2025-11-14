@@ -6,6 +6,7 @@
   html{ @apply font-bebas; }
 }
 
+
 @font-face {
   font-family: 'Bebas Neue';
   src: url('/fonts/BebasNeue-Regular.woff2') format('woff2');
@@ -44,4 +45,55 @@
 .page-leave-to {
   transform: translateX(-100%);
   opacity: 0;
+}
+
+@media (max-width: 820px) {
+
+  .safe-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #22c55e;
+    z-index: 9999999;
+    pointer-events: none;
+  }
+
+  .safe-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #22c55e;
+    z-index: 9999999;
+    pointer-events: none;
+
+    display: block;
+  }
+
+  html.nav-open .safe-bottom {
+    display: block;
+  }
+
+  html.no-loading:not(.nav-open) .safe-bottom {
+    display: none;
+  }
+}
+
+@media (min-width: 821px) {
+  .safe-top,
+  .safe-bottom {
+    display: none !important;
+  }
+}
+
+
+/* ----- SCROLL LOCK MENU MOBILE ----- */
+html.overflow-hidden,
+body.overflow-hidden {
+  overflow: hidden !important;
+  height: 100vh;
+  touch-action: none;
 }

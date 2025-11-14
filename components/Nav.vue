@@ -101,6 +101,9 @@ const links = [
 const toggle = () => (open.value = !open.value)
 watch(open, (v) => {
   document.documentElement.classList.toggle('overflow-hidden', v)
+  document.documentElement.classList.toggle('nav-open', v)
+  document.body.classList.toggle('overflow-hidden', v)
+
   if (v) {
     currentPath.value = window.location.pathname
     nextTick(() => {
