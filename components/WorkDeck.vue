@@ -56,10 +56,8 @@ const deck = ref<HTMLElement>()
 const cardRefs = ref<any[]>([])
 
 onMounted(() => {
-  const isPortrait = window.matchMedia("(orientation: portrait)").matches
-  const isSmallScreen = window.innerWidth < 768
-  const isMobile = isSmallScreen || isPortrait
-  if (isMobile) return
+  const isDesktop = window.matchMedia('(min-width: 1024px)').matches
+  if (!isDesktop) return
 
   const cards = [...deck.value!.querySelectorAll<HTMLElement>('.deck-card')]
 

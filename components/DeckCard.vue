@@ -2,7 +2,13 @@
   <section class="mb-6 md:mb-0 flex justify-center">
     <NuxtLink
       :to="link"
-      class="deck-card group block relative md:absolute md:top-[6rem] md:left-1/2 md:-translate-x-1/2 w-[90%] md:w-[90vmin] sm:h-[55vmin] h-[60vmin] rounded-3xl overflow-hidden bg-green-900 shadow-xl transition-transform duration-300 hover:scale-[1.03]"
+      class="deck-card group block relative
+         mb-6 lg:mb-0
+         lg:absolute lg:top-[6rem] lg:left-1/2 lg:-translate-x-1/2
+         w-[90%] lg:w-[90vmin]
+         sm:h-[55vmin] h-[60vmin]
+         rounded-3xl overflow-hidden bg-green-900 shadow-xl
+         transition-transform duration-300 hover:scale-[1.03]"
     >
       <img
         :src="img"
