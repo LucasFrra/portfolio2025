@@ -41,6 +41,21 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'preconnect', href: 'https://lucasferreira.fr', crossorigin: 'anonymous' },
+        {
+          rel: 'preload',
+          href: '/fonts/Anton-Regular.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous'
+        },
+        {
+          rel: 'preload',
+          href: '/fonts/BebasNeue-Regular.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous'
+        },
       ],
     },
   },

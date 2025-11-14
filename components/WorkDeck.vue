@@ -29,7 +29,7 @@ const projects = [
   {
     id: 1,
     title: 'Plateforme de gestion de fichier 3D',
-    img: '/projects/sawar/plateforme-fichiers-3d.webp',
+    img: '/projects/sawar/plateforme-fichiers-3d-thumbnail.webp',
     link: '/projects/sawar',
     description: 'Une plateforme pour gérer et visualiser des fichiers 3D.',
     tags: ['Laravel', 'Firebase', 'Bootstrap']
@@ -37,7 +37,7 @@ const projects = [
   {
     id: 2,
     title: 'Site vitrine',
-    img: '/projects/pizza-luna/site-vitrine-pizza-luna.webp',
+    img: '/projects/pizza-luna/site-vitrine-pizza-luna-thumbnail.webp',
     link: '/projects/pizza-luna',
     description: 'Site vitrine pour une pizzeria locale, optimisé pour le SEO.',
     tags: ['Wordpress', 'PHP', 'SEO']
@@ -45,7 +45,7 @@ const projects = [
   {
     id: 3,
     title: 'Application de gestion de budget',
-    img: '/projects/mesfinances/gestion-budget.webp',
+    img: '/projects/mesfinances/gestion-budget-thumbnail.webp',
     link: '/projects/mesfinances',
     description: 'Application web pour suivre et gérer ses finances personnelles.',
     tags: ['React', 'TypeScript', 'GraphQL']

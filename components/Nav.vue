@@ -3,7 +3,7 @@
       <nav class="max-w-7xl mx-auto flex items-center justify-between px-10 py-3 font-semibold gap-10">
         <div class="flex items-center gap-6">
           <NuxtLink to="/">
-            <img src="/logo-placeholder.svg" class="h-14" />
+            <img src="/logo-placeholder.svg" class="h-14" alt="Logo Lucas Ferreira" />
           </NuxtLink>
 
           <div
@@ -55,7 +55,7 @@
           </button>
 
           <NuxtLink to="/" @click="toggle" class="absolute top-6 left-6">
-            <img src="/logo-placeholder-base-white.svg" class="h-12" />
+            <img src="/logo-placeholder-base-white.svg" class="h-12" alt="Logo Lucas Ferreira" />
           </NuxtLink>
 
           <div class="flex flex-col gap-2 text-7xl leading-[0.9] w-full">

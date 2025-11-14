@@ -44,20 +44,23 @@ const { $gsap } = useNuxtApp()
 const hero = ref<HTMLElement>()
 const titleEl = ref<HTMLElement>()
 
-onMounted(() => {
+function initHero() {
   const title = titleEl.value!
-
   const layers = title.querySelectorAll<HTMLElement>('.layer')
+
   const tiltRange = 4
-  const spriteShift = 15
   const layerShift = 6
   const layerDepth = [-1, 0, 1]
+
   let raf: number | null = null
+
   window.addEventListener('pointermove', e => {
     if (raf) cancelAnimationFrame(raf)
+
     raf = requestAnimationFrame(() => {
       const pctX = (e.clientX / window.innerWidth - 0.5) * 2
       const pctY = (e.clientY / window.innerHeight - 0.5) * 2
+
       $gsap.to(title, {
         rotateX: pctY * tiltRange,
         rotateY: pctX * tiltRange,
@@ -65,6 +68,7 @@ onMounted(() => {
         duration: .4,
         ease: 'power2.out'
       })
+
       layers.forEach((el, i) =>
         $gsap.to(el, {
           x: -pctX * layerShift * layerDepth[i % 3],
@@ -75,6 +79,15 @@ onMounted(() => {
       )
     })
   })
+}
+
+onMounted(() => {
+  // ⬇️ Le hack qui libère ton LCP
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => initHero())
+  } else {
+    setTimeout(() => initHero(), 80)
+  }
 })
 </script>
 

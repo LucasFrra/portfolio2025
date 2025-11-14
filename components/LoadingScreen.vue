@@ -33,22 +33,21 @@ onMounted(() => {
 <style scoped>
 .circle-mask {
   position: absolute;
-  width: 0px;
-  height: 0px;
+  width: 1500px;
+  height: 1500px;
   border-radius: 9999px;
   background: #22c55e;
+  transform: scale(0);
   animation: circleOpen 1.1s forwards ease-out;
 }
 
 @keyframes circleOpen {
   0% {
-    width: 0;
-    height: 0;
+    transform: scale(0);
     opacity: 1;
   }
   100% {
-    width: 2000px;
-    height: 2000px;
+    transform: scale(1.4);
     opacity: 0.1;
   }
 }
